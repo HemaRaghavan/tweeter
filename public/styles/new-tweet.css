@@ -21,7 +21,7 @@ main .new-tweet {
   
 }
 .form_footer{
-  font-family: 'Bungee', cursive, sans-serif;
+  font-family: 'Bungee', sans-serif;
 
 }
 .counter{
@@ -39,3 +39,52 @@ main .new-tweet {
   color:  #FFFF; 
   margin-top: 1em;
 }
+.all-tweets{
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+article.tweet{
+  background-color: #f4f1ec;
+  border: 2px solid;
+  padding: 1em 1em 1em 1em;  
+}
+article.tweet header{
+  background-color: #f4f1ec;
+  height : 100px;
+
+}
+
+
+
+article.tweet .tweeter-handle{
+  color: gray;
+  display: none;
+  float: right;
+  
+}
+article.tweet .tweet-content{
+  border-bottom: 2px solid;
+  padding-left: .5em;
+  padding-bottom: 2em; 
+
+}
+article.tweet footer{
+  font-size: 20px;
+}
+article.tweet footer a{
+  color:blue;
+  float: right; 
+  padding-right: 2em;
+}
+.all-tweets:hover{
+  font-weight: bold;
+  box-shadow: 5px 10px #929191;
+  
+
+}
+.all-tweets:hover .tweeter-handle{
+  display:block;
+
+}
+

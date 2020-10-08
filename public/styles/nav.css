@@ -7,26 +7,26 @@ nav {
   
 
 }
-.logo{
+nav .logo{
   font-family: 'Bungee', cursive, sans-serif;
   font-size: 35px;
 
 }
-.bold{
+nav .bold{
   font-weight: bolder;
   
 
 }
 
-.new-tweet{
+nav .new-tweet-link{
   float: right;
 }
 
-.fa{
+nav .fa{
   font-size:35px;
   color:red;
   float: right; 
-  padding-right: 70px;
+  padding-right: 2em;
   
 
 }

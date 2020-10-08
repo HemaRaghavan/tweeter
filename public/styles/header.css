@@ -5,18 +5,18 @@ header {
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 
 }
-.profile{
+header .profile{
   display: flex;
   justify-content: center; 
   align-items: center;
-  }
-  .name{
+}
+header .name{
   display: flex;
   justify-content: center; 
   align-items: center;
   
-  }
+}
   
-.name_bold{
+header .name_bold{
   font-weight: bolder;
 }
