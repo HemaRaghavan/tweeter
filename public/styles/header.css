@@ -9,14 +9,14 @@ header {
   display: flex;
   justify-content: center; 
   align-items: center;
-}
-.name{
+  }
+  .name{
   display: flex;
   justify-content: center; 
   align-items: center;
-
-}
-
+  
+  }
+  
 .name_bold{
   font-weight: bolder;
 }
