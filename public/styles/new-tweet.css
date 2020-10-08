@@ -50,6 +50,7 @@ article.tweet{
   padding: 1em 1em 1em 1em;  
 }
 article.tweet header{
+  margin-top: 0px;
   background-color: #f4f1ec;
   height : 100px;
 
