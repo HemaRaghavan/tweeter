@@ -28,6 +28,12 @@ main .new-tweet {
   float: right;
   padding-top: 1em;
 }
+.invalid{
+  float: right;
+  padding-top: 1em;
+  color: red;
+
+}
 .form_button{
   background-color: #4056A1;
   color:  #FFFF; 
