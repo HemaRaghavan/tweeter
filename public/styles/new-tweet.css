@@ -49,6 +49,7 @@ article.tweet{
   border: 2px solid;
   padding: 1em 1em 1em 1em;  
   margin-bottom : 2em;
+  overflow: scroll;
 }
 article.tweet header{
   margin-top: 0px;

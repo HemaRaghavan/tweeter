@@ -26,9 +26,10 @@ $(document).ready(function() {
     return output
   };
   const renderTweets = tweetsArray => {
+    $("#tweets-container").empty();
     for (const key in tweetsArray) {
       const $tweet = createTweetElement(tweetsArray[key]);
-      $('#tweets-container').append($tweet);
+      $('#tweets-container').prepend($tweet);
     }
   }
   
@@ -46,15 +47,28 @@ $(document).ready(function() {
 
   $("#form_submit").submit(function(event) {
      // prevent the default behaviour to leave the page
-    event.preventDefault();                               
+    event.preventDefault(); 
+    const inputLength = $(this).children('textarea').val().length;
+    if(inputLength >140) {                                     
+      $(this).each(function() {
+        alert("Sorry, content exceeds the 140 character limit");
+      });
+    } else if (inputLength === 0) {                            
+        $(this).each(function() {
+          alert("Tweet is empty");
+        });
+    } else {
+      $.ajax({
+        method: 'POST',
+        url: '/tweets',
+        data: $(this).serialize()
+      }).then(function(data) {
+         loadTweets();
+      })
+      $(this).children('textarea').val('');
+      $(this).find(".counter").text('140');
 
-    $.ajax({
-      method: 'POST',
-      url: '/tweets',
-      data: $(this).serialize()
-    }).then(function(data) {
-        console.log("success");
-    })
+    }
     
     
   });
