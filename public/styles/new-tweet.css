@@ -48,6 +48,7 @@ article.tweet{
   background-color: #f4f1ec;
   border: 2px solid;
   padding: 1em 1em 1em 1em;  
+  margin-bottom : 2em;
 }
 article.tweet header{
   margin-top: 0px;
