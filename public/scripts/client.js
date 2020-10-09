@@ -4,17 +4,23 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
+  // Function to prevent Cross-Site Scripting:
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
   const createTweetElement = postObj => {
     let output = ""
     output += `<article class="tweet">`;
     output += "<header>";
-    output += `<img class="tweets-img" src=${postObj.user.avatars}> `;
-    output += `<span class="tweeter-name">${postObj.user.name}</span> `;
-    output += `<a class="tweeter-handle">${postObj.user.handle}</a> `;
+    output += `<img class="tweets-img" src=${escape(postObj.user.avatars)}> `;
+    output += `<span class="tweeter-name">${escape(postObj.user.name)}</span> `;
+    output += `<a class="tweeter-handle">${escape(postObj.user.handle)}</a> `;
     output += `</header>`;
     output += `<p class="tweet-content">`;
-    output += `${postObj.content.text}</p>`;
-    output +=  `<footer class="footer"> ${postObj.created_at} <a class="icon">
+    output += `${escape(postObj.content.text)}</p>`;
+    output +=  `<footer class="footer"> ${escape(postObj.created_at)} <a class="icon">
                 <i class="fa fa-flag" aria-hidden="true"></i>
                 <i class="fa fa-retweet" aria-hidden="true"></i>
                 <i class="fa fa-heart" aria-hidden="true"></i>
