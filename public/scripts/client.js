@@ -54,16 +54,18 @@ $(document).ready(function() {
   $("#form_submit").submit(function(event) {
      // prevent the default behaviour to leave the page
     event.preventDefault(); 
+    $('.tweet-error').hide()
     const inputLength = $(this).children('textarea').val().length;
     if(inputLength >140) {                                     
       $(this).each(function() {
-        alert("Sorry, content exceeds the 140 character limit");
+        $('.tweet-error').text("Sorry, content exceeds the 140 character limit").slideDown("slow");
       });
     } else if (inputLength === 0) {                            
         $(this).each(function() {
-          alert("Tweet is empty");
+          $('.tweet-error').text("Tweet is empty").slideDown("slow");
         });
     } else {
+      $('.tweet-error').hide();
       $.ajax({
         method: 'POST',
         url: '/tweets',
