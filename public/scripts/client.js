@@ -20,7 +20,7 @@ $(document).ready(function() {
     output += `</header>`;
     output += `<p class="tweet-content">`;
     output += `${escape(postObj.content.text)}</p>`;
-    output +=  `<footer class="footer"> ${escape(postObj.created_at)} <a class="icon">
+    output +=  `<footer class="footer"> 10 days ago <a class="icon">
                 <i class="fa fa-flag" aria-hidden="true"></i>
                 <i class="fa fa-retweet" aria-hidden="true"></i>
                 <i class="fa fa-heart" aria-hidden="true"></i>
