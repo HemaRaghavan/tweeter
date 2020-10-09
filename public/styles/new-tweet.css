@@ -76,6 +76,7 @@ article.tweet footer{
   font-size: 20px;
 }
 article.tweet footer a{
+  display: none;
   color:blue;
   float: right; 
   padding-right: 2em;
@@ -90,6 +91,11 @@ article.tweet footer a{
   display:block;
 
 }
+.all-tweets:hover .icon{
+  display:block;
+
+}
+
 .tweet-error {
   display: none;
   background-color: rgba(255, 0, 0, .25);
