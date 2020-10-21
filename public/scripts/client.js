@@ -10,6 +10,34 @@ $(document).ready(function() {
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   }
+
+// Function: calculate how long ago the tweet was created:
+function convertTime(timeCreated) {
+  let created = new Date(timeCreated);
+  let timeInSeconds = Math.floor((Date.now() - created) / 1000);
+  let difference = Math.floor(timeInSeconds / 31536000);
+  if (difference > 1) {
+      return difference + ' years ago';
+  }
+  difference = Math.floor(timeInSeconds / 2592000);
+  if (difference > 1) {
+      return difference + ' months ago';
+  }
+  difference = Math.floor(timeInSeconds / 86400);
+  if (difference > 1) {
+      return difference + ' days ago';
+  }
+  difference = Math.floor(timeInSeconds / 3600);
+  if (difference > 1) {
+      return difference + ' hours ago';
+  }
+  difference = Math.floor(timeInSeconds / 60);
+  if (difference > 1) {
+      return difference + ' minutes ago';
+  }
+  return Math.floor(timeInSeconds) + ' seconds ago';
+}
+
   const createTweetElement = postObj => {
     let output = ""
     output += `<article class="tweet">`;
@@ -20,7 +48,7 @@ $(document).ready(function() {
     output += `</header>`;
     output += `<p class="tweet-content">`;
     output += `${escape(postObj.content.text)}</p>`;
-    output +=  `<footer class="footer"> 10 days ago <a class="icon">
+    output +=  `<footer class="footer"> ${escape(convertTime(postObj.created_at))} <a class="icon">
                 <i class="fa fa-flag" aria-hidden="true"></i>
                 <i class="fa fa-retweet" aria-hidden="true"></i>
                 <i class="fa fa-heart" aria-hidden="true"></i>
