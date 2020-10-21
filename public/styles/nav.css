@@ -6,17 +6,15 @@ nav {
   padding : 1.5em 1.5em 1.5em 1.5em;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
-
 }
+
 nav .logo{
   font-family: 'Bungee', sans-serif;
   font-size: 35px;
-
 }
+
 nav .bold{
   font-weight: bolder;
-  
-
 }
 
 nav .new-tweet-link{
@@ -28,8 +26,6 @@ nav .fa{
   color:red;
   float: right; 
   padding-right: 2em;
-  
-
 }
 
 
