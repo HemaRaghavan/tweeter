@@ -38,6 +38,8 @@ main .new-tweet {
   background-color: #4056A1;
   color:  #FFFF; 
   margin-top: 1em;
+  border : none;
+  cursor: pointer;
 }
 .all-tweets{
   margin-top: 3em;
